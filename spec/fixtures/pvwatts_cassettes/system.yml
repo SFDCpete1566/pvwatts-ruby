@@ -1,0 +1,30 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://developer.nrel.gov/api/pvwatts/v4.json?api_key=9aSWRV4euLEB3yg2eJevtSbRAE3eNXw1r7uqZ8dz&dataset=tmy2&derate=0.77&lat=40&lon=-105&system_size=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Date:
+      - Tue, 11 Feb 2014 20:03:01 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"errors":["An invalid api_key was supplied. Get one at http://developer.nrel.gov"]}'
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 20:03:01 GMT
+recorded_with: VCR 2.8.0

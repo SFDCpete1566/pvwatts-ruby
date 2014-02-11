@@ -9,7 +9,7 @@ describe PVWatts::System do
     end
  
     it "has the base url set to the PV-Watts endpoint" do
-      expect(PVWatts::System.base_uri).to eq('http://api/pvwatts/v4')
+      expect(PVWatts::System.base_uri).to eq('http://developer.nrel.gov')
     end
  
   end
@@ -27,7 +27,7 @@ describe PVWatts::System do
 	  end
 	 
 	  it "records the fixture" do
-	    PVWatts::System.get('/api/pvwatts/v4.json?api_key=E5VcxKj2Cv0sksDurt5wIXpSCAAgsYvm3WYgHBcj&system_size=4&dataset=tmy2&derate=0.77&lat=40&lon=-105')
+	    PVWatts::System.get('/api/pvwatts/v4.json?api_key='+ API-KEY + '&system_size=4&dataset=tmy2&derate=0.77&lat=40&lon=-105')
 	  end
 
 	  it "has a profile method" do
